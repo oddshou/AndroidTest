@@ -16,6 +16,7 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
@@ -77,6 +78,15 @@
         <activity
             android:name=".scroll.ScrollActivity"
             android:label="@string/title_activity_scroll" >
+        </activity>
+        <activity
+            android:name="com.oddshou.testall.scroll.TabIterceptActivity"
+            android:label="@string/title_activity_tab_itercept" >
+                    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oddshou.testall.category.example" />
+            </intent-filter>
         </activity>
     </application>
 

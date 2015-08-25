@@ -17,5 +17,6 @@
     <string name="title_activity_activity_layout_view">ActivityLayoutView</string>
     <string name="title_activity_odds_demos">OddsDemos</string>
     <string name="title_activity_install_from_assets">Files/InstallApk/InstallFromAssets</string>
+    <string name="title_activity_tab_itercept">Activity/TabIterceptActivity</string>
 
 </resources>
