@@ -57,6 +57,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.oddshou.testall.apkinstall.InstallFromAssets"
+            android:label="@string/title_activity_install_from_assets" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.oddshou.testall.category.example" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activity.OneActivity"
             android:label="@string/title_activity_one"
             android:launchMode="singleTask" >
