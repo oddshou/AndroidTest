@@ -1,20 +1,20 @@
 package com.oddshou.testall.scroll;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+//import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.oddshou.testall.R;
 import com.oddshou.testall.fragment.FragmentScrollView;
 
-public class TabIterceptActivity extends Activity {
+public class TabIterceptActivity extends FragmentActivity {
 
     private FragmentScrollView mFragmentScrollView1;
     private FragmentScrollView mFragmentScrollView2;
@@ -39,7 +39,7 @@ public class TabIterceptActivity extends Activity {
 	    mFragmentList.clear();
 	    mFragmentList.add(mFragmentScrollView1);
 	    mFragmentList.add(mFragmentScrollView2);
-		mViewPager.setAdapter(new TabFragmentAdapter(getFragmentManager(), mFragmentList));
+		mViewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), mFragmentList));
 	}
 	
 	/**
@@ -57,15 +57,15 @@ public class TabIterceptActivity extends Activity {
             mList = list;
         }
 
-        @Override
-        public android.app.Fragment getItem(int arg0) {
-            // TODO Auto-generated method stub
-            if (mList.size() > 0) {
-                return mList.get(arg0);
-            } else {
-                return null;
-            }
-        }
+//        @Override
+//        public android.app.Fragment getItem(int arg0) {
+//            // TODO Auto-generated method stub
+//            if (mList.size() > 0) {
+//                return mList.get(arg0);
+//            } else {
+//                return null;
+//            }
+//        }
 
         @Override
         public int getCount() {
@@ -83,6 +83,16 @@ public class TabIterceptActivity extends Activity {
                     return "page1";
             }
             return null;
+        }
+
+        @Override
+        public Fragment getItem(int arg0) {
+            // TODO Auto-generated method stub
+          if (mList.size() > 0) {
+          return mList.get(arg0);
+      } else {
+          return null;
+      }
         }
 	    
 	}

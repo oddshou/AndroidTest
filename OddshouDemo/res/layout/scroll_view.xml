@@ -5,14 +5,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical" >
+        
+        <View 
+            android:id="@+id/viewTest"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            />
         
         <Button 
             android:id="@+id/btnContent"
             android:layout_width="match_parent"
-            android:layout_height="1600dp"
+            android:layout_height="1200dp"
             android:background="@android:color/holo_blue_dark"
+            android:text="this is a button"
             />
         
     </LinearLayout>
