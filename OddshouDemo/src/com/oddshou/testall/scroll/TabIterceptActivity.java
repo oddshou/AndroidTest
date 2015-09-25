@@ -57,16 +57,6 @@ public class TabIterceptActivity extends FragmentActivity {
             mList = list;
         }
 
-//        @Override
-//        public android.app.Fragment getItem(int arg0) {
-//            // TODO Auto-generated method stub
-//            if (mList.size() > 0) {
-//                return mList.get(arg0);
-//            } else {
-//                return null;
-//            }
-//        }
-
         @Override
         public int getCount() {
             // TODO Auto-generated method stub

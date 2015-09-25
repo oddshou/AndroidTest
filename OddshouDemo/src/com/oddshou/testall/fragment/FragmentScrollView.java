@@ -4,12 +4,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.oddshou.testall.Logger;
 import com.oddshou.testall.R;
 
 public class FragmentScrollView extends Fragment {
+    protected static final String TAG = "FragmentScrollView";
     private int mScrollViewBgColor;
+    private Button mBtnContent;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,8 +27,10 @@ public class FragmentScrollView extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         View rootView = inflater.inflate(R.layout.scroll_view, null);
+        mBtnContent = (Button) rootView.findViewById(R.id.btnContent);
+        mBtnContent.setOnClickListener(mViewClickListen);
         if (mScrollViewBgColor != 0) {
-            rootView.findViewById(R.id.btnContent).setBackgroundColor(mScrollViewBgColor);
+            mBtnContent.setBackgroundColor(mScrollViewBgColor);
         }
         return rootView;
     }
@@ -31,5 +38,14 @@ public class FragmentScrollView extends Fragment {
     public void setColor(int color){
         mScrollViewBgColor = color;
     }
+    
+    private OnClickListener mViewClickListen = new OnClickListener() {
+        
+        @Override
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            Logger.i(TAG, "mViewClickListen "+ "mBtnContent", "oddshou");
+        }
+    };
 
 }
